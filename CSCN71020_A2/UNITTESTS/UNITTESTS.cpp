@@ -20,7 +20,7 @@ namespace UNITTESTS
 
 			int actual = getPerimeter(&length, &width);
 
-			Assert::AreEqual(expected, actual, L"Function returned wring value.");
+			Assert::AreEqual(expected, actual);
 		}
 
 		TEST_METHOD(TESTgetArea)
@@ -63,6 +63,37 @@ namespace UNITTESTS
 			setLength(input, &length);
 
 			Assert::AreEqual(8, length);
+		}
+
+		// unique test cases for set width
+		TEST_METHOD(TESTsetWidth_NORMALCASE)
+		{
+			// define values
+			int width = 3, input = 30; 
+
+			setWidth(input, &width);  
+
+			Assert::AreEqual(30, width); 
+		}
+
+		TEST_METHOD(TESTsetWidth_ABNORMALCASE_ZERO)
+		{
+			// define values
+			int width = 8, input = 0;
+
+			setWidth(input, &width); 
+
+			Assert::AreEqual(8, width);
+		}
+
+		TEST_METHOD(TESTsetWidth_SAMEVALUES)
+		{
+			// define values
+			int width = 40, input = 40; 
+
+			setWidth(input, &width); 
+
+			Assert::AreEqual(40, width);
 		}
 	};
 }

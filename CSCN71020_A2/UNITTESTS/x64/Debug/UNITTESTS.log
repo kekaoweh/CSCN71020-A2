@@ -1,2 +1,5 @@
-﻿  UNITTESTS.cpp
+﻿  pch.cpp
+  main.c
+  UNITTESTS.cpp
+     Creating library C:\Users\Admin\source\repos\CSCN71020-A2\CSCN71020_A2\x64\Debug\UNITTESTS.lib and object C:\Users\Admin\source\repos\CSCN71020-A2\CSCN71020_A2\x64\Debug\UNITTESTS.exp
   UNITTESTS.vcxproj -> C:\Users\Admin\source\repos\CSCN71020-A2\CSCN71020_A2\x64\Debug\UNITTESTS.dll
