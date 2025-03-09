@@ -1,7 +1,9 @@
+#include "../UNITTESTS/pch.h"
 #include <stdio.h>
 #include <stdbool.h>
 
 #include "main.h"
+
 
 void main() {
 	int length = 1;
@@ -83,13 +85,13 @@ void setWidth(int input, int *width) {
 }
 
 int getPerimeter(int *length, int *width) {
-	int perimeter = *length + *length + *width;
-	return perimeter;
+	return 2* (*length) + 2* (*width);
+	
 }
 
 int getArea(int *length, int *width) {
-	int area = *length * *width;
-	return area;
+	return *length * *width;
+	
 }
 
 void printWelcomeMenu() {
