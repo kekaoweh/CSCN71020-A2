@@ -33,5 +33,36 @@ namespace UNITTESTS
 
 			Assert::AreEqual(expected, actual);
 		}
+
+		// unique test cases for set length
+		TEST_METHOD(TESTsetLength_NORMALCASE)
+		{
+			// define values
+			int length = 4, input = 40;
+			
+			setLength(input, &length);
+
+			Assert::AreEqual(40, length);
+		}
+
+		TEST_METHOD(TESTsetLength_ABNORMALCASE_BELOWZERO)
+		{
+			// define values
+			int length = 6, input = -6;
+
+			setLength(input, &length); 
+
+			Assert::AreEqual(6, length);
+		}
+
+		TEST_METHOD(TESTsetLength_ABNORMALCASE_ABOVE99) 
+		{
+			// define values
+			int length = 8, input = 180;
+
+			setLength(input, &length);
+
+			Assert::AreEqual(8, length);
+		}
 	};
 }
